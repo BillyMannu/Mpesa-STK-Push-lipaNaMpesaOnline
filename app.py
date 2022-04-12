@@ -17,7 +17,7 @@ def lipa_na_mpesa_online():
     access_token = Token.validate_token
     headers = {"Authorization":"Bearer %s" % access_token}
     request_body = {        
-        "BusinessShortCode":Generate.Business_ShortCode,    
+        "BusinessShortCode":Generate.Business_ShortCode,   #your business/production shortcode (paybill) number
         "Password": Generate.decode_password,    
         "Timestamp":Generate.lipa_time,        
         "TransactionType": "CustomerPayBillOnline",    
@@ -26,7 +26,7 @@ def lipa_na_mpesa_online():
         "PartyB":Generate.Business_ShortCode,    
         "PhoneNumber":Generate.MSISDN, 
         "CallBackURL":"https://192.168.5.177",    
-        "AccountReference":"Relax Ni Billy we fala",    
+        "AccountReference":"Relax Ni Billy we fala :)",    
         "TransactionDesc":"BillyWeDidIt"
     }
     print(Generate.MSISDN)

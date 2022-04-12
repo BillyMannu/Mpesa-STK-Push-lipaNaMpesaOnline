@@ -29,6 +29,5 @@ class Generate:
         data_to_encode = Business_ShortCode + passKey + lipa_time
         online_password = base64.b64encode(data_to_encode.encode())
         decode_password = online_password.decode('utf-8')
-        # MSISDN = os.getenv('MSISDN')
-        MSISDN = 254796746864
+        MSISDN = os.getenv('phone_number')
         
